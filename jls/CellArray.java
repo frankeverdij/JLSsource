@@ -616,6 +616,20 @@ public class CellArray
                     break;
                 }
                 break;
+            case Properties.XLAT_GLIDE_DIAG_FWD:
+                if (0 != (jumpsFuture & 1))
+                {
+                    x = ymax - row;
+                    y = xmax - col;
+                }
+                break;
+            case Properties.XLAT_GLIDE_DIAG_BWD:
+                if (0 != (jumpsFuture & 1))
+                {
+                    x = row;
+                    y = col;
+                }
+                break;
             }
             return getCellPtr(x, y, gen);
         }

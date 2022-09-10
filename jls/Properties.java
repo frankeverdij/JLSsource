@@ -40,11 +40,13 @@ public class Properties
     public static final int XLAT_ROT_90 = 5;
     public static final int XLAT_ROT_180 = 6;
     public static final int XLAT_ROT_270 = 7;
+    public static final int XLAT_GLIDE_DIAG_FWD = 8;
+    public static final int XLAT_GLIDE_DIAG_BWD = 9;
 
     public static final String[] TRANSLATION_NAMES =
         { "None", "Flip-Horizontal", "Flip-Vertical", "Flip-Diagonal",
                 "Flip-Diagonal-Backwards", "Rotate-90", "Rotate-180",
-                "Rotate-270" };
+                "Rotate-270", "Glide-Diagonal", "Glide-Diagonal-Backwards" };
 
     private boolean validated = false;
     
@@ -161,6 +163,8 @@ public class Properties
         case XLAT_FLIP_HORZ:
         case XLAT_FLIP_VERT:
         case XLAT_ROT_180:
+        case XLAT_GLIDE_DIAG_FWD:
+        case XLAT_GLIDE_DIAG_BWD:
             break;
         case XLAT_FLIP_DIAG_FWD:
         case XLAT_FLIP_DIAG_BWD:

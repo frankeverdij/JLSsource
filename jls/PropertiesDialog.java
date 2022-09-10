@@ -136,6 +136,10 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
 
     private JRadioButton xlatDiagBwd = null;
 
+    private JRadioButton xlatGlideDiagFwd = null;
+
+    private JRadioButton xlatGlideDiagBwd = null;
+
     private JPanel translationPanel = null;
 
     private JPanel symmetryPanel = null;
@@ -471,6 +475,14 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
             {
                 result.setTranslation(Properties.XLAT_ROT_270);
             }
+            else if (xlatGlideDiagFwd.isSelected())
+            {
+                result.setTranslation(Properties.XLAT_GLIDE_DIAG_FWD);
+            }
+            else if (xlatGlideDiagBwd.isSelected())
+            {
+                result.setTranslation(Properties.XLAT_GLIDE_DIAG_BWD);
+            }
             else
             {
                 result.setTranslation(Properties.XLAT_NONE);
@@ -589,6 +601,8 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
         xlatRot90.setSelected(props.getTranslation() == Properties.XLAT_ROT_90);
         xlatRot180.setSelected(props.getTranslation() == Properties.XLAT_ROT_180);
         xlatRot270.setSelected(props.getTranslation() == Properties.XLAT_ROT_270);
+        xlatGlideDiagFwd.setSelected(props.getTranslation() == Properties.XLAT_GLIDE_DIAG_FWD);
+        xlatGlideDiagBwd.setSelected(props.getTranslation() == Properties.XLAT_GLIDE_DIAG_BWD);
         group = new ButtonGroup();
         group.add(xlatNone);
         group.add(xlatHorz);
@@ -598,6 +612,8 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
         group.add(xlatRot90);
         group.add(xlatRot180);
         group.add(xlatRot270);
+        group.add(xlatGlideDiagFwd);
+        group.add(xlatGlideDiagBwd);
         birth0.setSelected(props.getRuleBirth(0));
         birth1.setSelected(props.getRuleBirth(1));
         birth2.setSelected(props.getRuleBirth(2));
@@ -647,6 +663,8 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
         xlatRot90.setEnabled(editable);
         xlatRot180.setEnabled(editable);
         xlatRot270.setEnabled(editable);
+        xlatGlideDiagFwd.setEnabled(editable);
+        xlatGlideDiagBwd.setEnabled(editable);
         tileRightNo.setEnabled(editable);
         tileRightYes.setEnabled(editable);
         tileRightShiftDown.setEnabled(editable);
@@ -1773,6 +1791,46 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
     }
 
     /**
+     * This method initializes xlatGlideDiagFwd
+     *
+     * @return javax.swing.JRadioButton
+     */
+    private JRadioButton getXlatGlideDiagFwd()
+    {
+        if (xlatGlideDiagFwd == null)
+        {
+            xlatGlideDiagFwd = new JRadioButton();
+            xlatGlideDiagFwd.setText("Glide diagonal forward");
+            xlatGlideDiagFwd.setIcon(new ImageIcon(getClass().getResource("/images/xlat_6.gif")));
+            xlatGlideDiagFwd.setMnemonic(KeyEvent.VK_Q);
+            xlatGlideDiagFwd.setSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_6_sel.gif")));
+            xlatGlideDiagFwd.setDisabledIcon(new ImageIcon(getClass().getResource("/images/xlat_6_dis.gif")));
+            xlatGlideDiagFwd.setDisabledSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_6_sel_dis.gif")));
+        }
+        return xlatGlideDiagFwd;
+    }
+
+    /**
+     * This method initializes xlatGlideDiagBwd
+     *
+     * @return javax.swing.JRadioButton
+     */
+    private JRadioButton getXlatGlideDiagBwd()
+    {
+        if (xlatGlideDiagBwd == null)
+        {
+            xlatGlideDiagBwd = new JRadioButton();
+            xlatGlideDiagBwd.setText("Glide diagonal forward");
+            xlatGlideDiagBwd.setIcon(new ImageIcon(getClass().getResource("/images/xlat_7.gif")));
+            xlatGlideDiagBwd.setMnemonic(KeyEvent.VK_X);
+            xlatGlideDiagBwd.setSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_7_sel.gif")));
+            xlatGlideDiagBwd.setDisabledIcon(new ImageIcon(getClass().getResource("/images/xlat_7_dis.gif")));
+            xlatGlideDiagBwd.setDisabledSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_7_sel_dis.gif")));
+        }
+        return xlatGlideDiagBwd;
+    }
+
+    /**
      * This method initializes translationPanel
      *
      * @return javax.swing.JPanel
@@ -1814,6 +1872,8 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
             translationPanel.add(getXlatRot90(), null);
             translationPanel.add(getXlatRot180(), null);
             translationPanel.add(getXlatRot270(), null);
+            translationPanel.add(getXlatGlideDiagFwd(), null);
+            translationPanel.add(getXlatGlideDiagBwd(), null);
         }
         return translationPanel;
     }
