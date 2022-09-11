@@ -617,17 +617,23 @@ public class CellArray
                 }
                 break;
             case Properties.XLAT_GLIDE_DIAG_FWD:
-                if (0 != (jumpsFuture & 1))
                 {
                     x = ymax - row;
-                    y = xmax - col;
+                    y = xmax - col + 1;
+                    if (y > ymax)
+                        {
+                            y -= rows;
+                        }
                 }
                 break;
             case Properties.XLAT_GLIDE_DIAG_BWD:
-                if (0 != (jumpsFuture & 1))
                 {
                     x = row;
-                    y = col;
+                    y = col + 1;
+                    if (y > ymax)
+                        {
+                            y -= rows;
+                        }
                 }
                 break;
             }
