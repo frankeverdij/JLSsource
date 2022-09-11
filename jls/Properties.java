@@ -163,13 +163,13 @@ public class Properties
         case XLAT_FLIP_HORZ:
         case XLAT_FLIP_VERT:
         case XLAT_ROT_180:
-        case XLAT_GLIDE_DIAG_FWD:
-        case XLAT_GLIDE_DIAG_BWD:
             break;
         case XLAT_FLIP_DIAG_FWD:
         case XLAT_FLIP_DIAG_BWD:
         case XLAT_ROT_90:
         case XLAT_ROT_270:
+        case XLAT_GLIDE_DIAG_FWD:
+        case XLAT_GLIDE_DIAG_BWD:
             if (columns != rows)
             {
                 return "Selected translation can be used only on square field.";
