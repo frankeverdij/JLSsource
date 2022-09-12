@@ -1801,11 +1801,11 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
         {
             xlatGlideDiagFwd = new JRadioButton();
             xlatGlideDiagFwd.setText("Glide diagonal forward");
-            xlatGlideDiagFwd.setIcon(new ImageIcon(getClass().getResource("/images/xlat_8.gif")));
+            xlatGlideDiagFwd.setIcon(new ImageIcon(getClass().getResource("/images/xlat_10.gif")));
             xlatGlideDiagFwd.setMnemonic(KeyEvent.VK_Q);
-            xlatGlideDiagFwd.setSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_8_sel.gif")));
-            xlatGlideDiagFwd.setDisabledIcon(new ImageIcon(getClass().getResource("/images/xlat_8_dis.gif")));
-            xlatGlideDiagFwd.setDisabledSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_8_sel_dis.gif")));
+            xlatGlideDiagFwd.setSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_10_sel.gif")));
+            xlatGlideDiagFwd.setDisabledIcon(new ImageIcon(getClass().getResource("/images/xlat_10_dis.gif")));
+            xlatGlideDiagFwd.setDisabledSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_10_sel_dis.gif")));
         }
         return xlatGlideDiagFwd;
     }
@@ -1821,11 +1821,11 @@ public class PropertiesDialog extends JDialog implements ActionListener, ChangeL
         {
             xlatGlideDiagBwd = new JRadioButton();
             xlatGlideDiagBwd.setText("Glide diagonal backward");
-            xlatGlideDiagBwd.setIcon(new ImageIcon(getClass().getResource("/images/xlat_7.gif")));
+            xlatGlideDiagBwd.setIcon(new ImageIcon(getClass().getResource("/images/xlat_9.gif")));
             xlatGlideDiagBwd.setMnemonic(KeyEvent.VK_X);
-            xlatGlideDiagBwd.setSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_7_sel.gif")));
-            xlatGlideDiagBwd.setDisabledIcon(new ImageIcon(getClass().getResource("/images/xlat_7_dis.gif")));
-            xlatGlideDiagBwd.setDisabledSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_7_sel_dis.gif")));
+            xlatGlideDiagBwd.setSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_9_sel.gif")));
+            xlatGlideDiagBwd.setDisabledIcon(new ImageIcon(getClass().getResource("/images/xlat_9_dis.gif")));
+            xlatGlideDiagBwd.setDisabledSelectedIcon(new ImageIcon(getClass().getResource("/images/xlat_9_sel_dis.gif")));
         }
         return xlatGlideDiagBwd;
     }
