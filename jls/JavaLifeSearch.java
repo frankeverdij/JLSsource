@@ -7,7 +7,7 @@ public class JavaLifeSearch implements Runnable{
 
     private static String fileToLoad = null;
     
-    private static final String version = "1.7";
+    private static final String version = "1.7g";
 
     public void run()
     {
